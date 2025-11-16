@@ -1,6 +1,8 @@
 package com.dog_house666.tutorialmod;
 
 
+import com.dog_house666.tutorialmod.block.ModBlocks;
+import com.dog_house666.tutorialmod.block.ModCreativeModeTabs;
 import com.dog_house666.tutorialmod.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -28,14 +30,17 @@ public class TutorialMod
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
-
+    //was changed
     public TutorialMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+//Регистрация
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -47,10 +52,16 @@ public class TutorialMod
     private void commonSetup(final FMLCommonSetupEvent event) {
     }
 
+    //was changed
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.ALEXANDRITE);
+            event.accept(ModItems.TETRA_GEM);   //добавляем в креатив
+            event.accept(ModItems.RAW_TETRA_GEM); //добавляем в креатив
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.TETRA_BLOCK);
+            event.accept(ModBlocks.RAW_TETRA_BLOCK);
         }
     }
 

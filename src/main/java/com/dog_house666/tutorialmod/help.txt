@@ -1,0 +1,24 @@
+alexandrite json just imported link to the Texture in item alexandrite.png
+
+in en_us json just definition for name the Item
+
+название в resources/assets/tutorialmod/model/item название json зависит от названия предмета:
+    //item registration
+    public static final RegistryObject<Item> ALEXANDRITE = ITEMS.register("tetra_gem", //tetra_gem
+            () -> new Item(new Item.Properties()));
+тем самым название json должно быть tetra_gem.json
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tutorialmod:item/tetra_gem_texture" //название текстуры должно быть //tetra_gem_texture
+  }
+}
+
+название json для языка завит от языка https://minecraft.fandom.com/wiki/Language
+{
+    "item.tutorialmod.tetra_gem": "Тетрагидропиранилциклопентилтетрагидропиридопиридиновый гем"
+}
+
+
+json в моделс айтем это для отображения в инвертаре
+json в блокстейтс отределяет как отображаеться блок

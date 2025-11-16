@@ -1,0 +1,12 @@
+{
+  "item.tutorialmod.tetra_gem": "Тетрагидропиранилциклопентилтетрагидропиридопиридиновый самоцвет",
+  "item.tutorialmod.raw_tetra_gem": "Необработанный тетрагидропиранилциклопентилтетрагидропиридопиридиновый самоцвет",
+
+  "item.tutorialmod.chisel": "Стамеска",
+
+  "block.tutorialmod.tetra_block": "Блок Тетрагидропиранилциклопентилтетрагидропиридопиридина",
+  "block.tutorialmod.raw_tetra_block": "Необработанный Блок Тетрагидропиранилциклопентилтетрагидропиридопиридина",
+
+  "creativetab.tutorialmod.tetra_items": "Тетра Предметы",
+  "creativetab.tutorialmod.tetra_blocks": "Тетра Блоки"
+}
