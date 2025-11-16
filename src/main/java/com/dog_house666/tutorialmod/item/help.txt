@@ -1,0 +1,2 @@
+alexandrite json just imported link to the Texture in item alexandrite.png
+in en_us json just definition for name the Item
